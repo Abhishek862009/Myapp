@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0C0E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Countdown Dots"
+            android:textColor="#F2F0EA"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="16dp"
+            android:text="Har din wallpaper apne aap update hoga."
+            android:textColor="#9A978F"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/previewImage"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:background="#141316"
+            android:scaleType="fitCenter"
+            android:contentDescription="Wallpaper preview" />
+
+        <TextView style="@style/SectionTitle" android:text="Target" />
+
+        <Button android:id="@+id/btnStartDate" style="@style/FieldButton"
+            android:text="Count start date" />
+        <Button android:id="@+id/btnTargetDate" style="@style/FieldButton"
+            android:text="Target / exam date" />
+
+        <EditText android:id="@+id/inputTotalDays" style="@style/FieldInput"
+            android:hint="Total days (e.g. 100)"
+            android:inputType="number" />
+
+        <TextView style="@style/SectionTitle" android:text="Colours (tap to cycle)" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="8dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <View android:id="@+id/swatchRemain" style="@style/Swatch" />
+                <TextView style="@style/SwatchLabel" android:text="Remaining" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <View android:id="@+id/swatchPassed" style="@style/Swatch" />
+                <TextView style="@style/SwatchLabel" android:text="Passed" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <View android:id="@+id/swatchToday" style="@style/Swatch" />
+                <TextView style="@style/SwatchLabel" android:text="Today" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <View android:id="@+id/swatchBg" style="@style/Swatch" />
+                <TextView style="@style/SwatchLabel" android:text="Background" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView style="@style/SectionTitle" android:text="Background photo" />
+        <Button android:id="@+id/btnChoosePhoto" style="@style/FieldButton"
+            android:text="📷 Choose photo" />
+        <Button android:id="@+id/btnRemovePhoto" style="@style/FieldButton"
+            android:text="Remove photo" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Darken photo" android:textColor="#9A978F" android:textSize="12sp"
+            android:layout_marginTop="10dp" />
+        <SeekBar android:id="@+id/seekDim" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:max="90" android:progress="55" />
+
+        <TextView style="@style/SectionTitle" android:text="Style" />
+        <CheckBox android:id="@+id/checkSquare" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Square dots (off = circles)"
+            android:textColor="#F2F0EA" />
+        <CheckBox android:id="@+id/checkShowText" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Show days-left number"
+            android:textColor="#F2F0EA" android:checked="true" />
+
+        <TextView style="@style/SectionTitle" android:text="Daily auto-update time" />
+        <Button android:id="@+id/btnUpdateHour" style="@style/FieldButton"
+            android:text="Update at 06:00" />
+
+        <Button android:id="@+id/btnApplyNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#E4572E"
+            android:text="Save + Set Wallpaper Now"
+            android:textColor="#0C0C0E"
+            android:textStyle="bold"
+            android:padding="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Ek baar set karne ke baad app har roz khud wallpaper update karega — dobara kholne ki zaroorat nahi."
+            android:textColor="#9A978F"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+</ScrollView>
